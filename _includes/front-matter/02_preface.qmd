@@ -1,0 +1,17 @@
+<section id="sec-preface" class="section">
+  <div class="page-header">
+    <div class="page-label">Front Matter</div>
+    <div class="page-title">Preface</div>
+  </div>
+  <div class="page-body">
+    <p>This book was born out of a frustration familiar to anyone who has worked at the boundary of data science and heavy industry. The gap between what modern machine learning can do, and what is actually deployed on a plant floor, remains astonishingly wide.</p>
+    <div class="tip-box">
+      <div class="tip-icon">💡</div>
+      <div class="tip-content">
+        <div class="tip-label">How to Use This Book</div>
+        <div class="tip-text">Readers may proceed linearly from Chapter 1 through Chapter 8, or dip into chapters relevant to their immediate work. Each chapter is designed to stand on its own while contributing to the larger narrative of building industrial data capability.</div>
+      </div>
+    </div>
+    <p style="margin-top:30px; color:var(--text-muted); font-style:italic;">— Manoj Kumar &nbsp;·&nbsp; [ City ] &nbsp;·&nbsp; [ Year ]</p>
+  </div>
+</section>

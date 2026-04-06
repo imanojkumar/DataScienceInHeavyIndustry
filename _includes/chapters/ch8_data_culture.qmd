@@ -1,0 +1,84 @@
+<section id="sec-ch8" class="section">
+  <div class="chapter-header">
+    <div class="chapter-num-label">
+      <span class="chapter-num-box">Chapter 08</span>
+      <span class="chapter-num-line"></span>
+    </div>
+    <h1 class="chapter-title">Building a Data Science Culture in Heavy Industry</h1>
+    <div class="chapter-subtitle">Change management, bridging IT/OT divides, MLOps for industrial environments, and making the business case</div>
+  </div>
+  <div class="objectives-box">
+    <div class="objectives-label">🎯 Learning Objectives</div>
+    <ul class="objectives-list">
+      <li>Identify the organisational barriers to data science adoption in industrial firms</li>
+      <li>Design a change management approach that engages domain experts as partners</li>
+      <li>Build an MLOps framework suited to operational technology environments</li>
+      <li>Construct a compelling business case for industrial data science investment</li>
+      <li>Define the skills, roles, and team structures needed to sustain analytical capability</li>
+    </ul>
+  </div>
+  <div class="pull-quote">
+    <div class="pull-quote-text">The technology is the easy part. Getting a seasoned plant manager, who has run a successful operation for twenty years without machine learning, to trust a model — that is the hard part. And it is the most important part.</div>
+    <div class="pull-quote-attr">— Chief Digital Officer, Global Mining Company</div>
+  </div>
+  <p class="body-p drop-cap">[ Chapter 8 full text placeholder — approximately 7,000–9,000 words covering: the organisational readiness framework, stakeholder mapping for industrial analytics programmes, the domain expert as co-developer, IT/OT convergence, MLOps for OT environments, building the business case, and a roadmap for building sustained analytical capability. ]</p>
+  <div class="diagram-placeholder">
+    <div class="ph-icon">🏗️</div>
+    <div class="ph-title">Figure 8.1 — The Industrial Analytics Maturity Model</div>
+    <div class="ph-hint">[ Staircase diagram with 5 maturity levels: (1) Descriptive reporting, (2) Diagnostic analysis, (3) Predictive modelling, (4) Prescriptive optimisation, (5) Autonomous operations. ]</div>
+  </div>
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-content">
+      <div class="tip-label">The 70-20-10 Rule for Industrial Analytics Teams</div>
+      <div class="tip-text">Successful industrial analytics teams are typically composed of approximately 70% domain experts and engineers who have developed data skills, 20% professional data scientists with industrial contextual knowledge, and 10% IT/infrastructure specialists who bridge the OT-IT divide. Inverting this ratio — loading teams with data scientists who lack domain knowledge — is one of the most common failure modes in industrial digitalisation programmes.</div>
+    </div>
+  </div>
+  <div class="image-placeholder">
+    <div class="ph-icon">👥</div>
+    <div class="ph-title">Figure 8.2 — Recommended Team Structure for an Industrial Data Science Centre of CoE</div>
+    <div class="ph-caption">[ Organisational chart showing a hub-and-spoke model: central CoE with data scientists, data engineers, and MLOps specialists; spokes representing embedded analytics engineers within each operational function (maintenance, process, safety, supply chain). ]</div>
+  </div>
+  <div class="brain-box">
+    <div class="brain-label">🧠 Brainstorming & Ideas</div>
+    <div class="brain-text">Building a data science culture is a multi-year endeavour. Consider your starting point and your destination:</div>
+    <ul class="brain-list">
+      <li>Where does your organisation sit on the analytics maturity model today? What is the single most important capability gap to close in the next 12 months?</li>
+      <li>Who are the "domain champion" candidates — experienced operators or engineers who have shown curiosity about data? How could they be developed and empowered?</li>
+      <li>What does a successful outcome look like in three years? What metrics would you use to evaluate it?</li>
+      <li>What are the political and cultural barriers that will most actively resist change? How will you address them?</li>
+    </ul>
+  </div>
+  <div class="quiz-box">
+    <div class="quiz-label">❓ Mini Quiz — Chapter 8</div>
+    <div class="quiz-q">1. In the context of industrial analytics teams, domain experts who have developed data skills are described as valuable because:</div>
+    <ul class="quiz-options" onclick="handleQuiz(event,'c')">
+      <li data-ans="a">They are less expensive to employ than professional data scientists</li>
+      <li data-ans="b">They can replace data engineers for infrastructure tasks</li>
+      <li data-ans="c">They combine process knowledge with analytical capability, enabling more relevant and trustworthy models</li>
+      <li data-ans="d">They are more likely to adopt new technologies than traditional engineers</li>
+    </ul>
+    <div class="quiz-q">2. MLOps in an industrial context differs from enterprise MLOps primarily because:</div>
+    <ul class="quiz-options" onclick="handleQuiz(event,'b')">
+      <li data-ans="a">Industrial models require more data to train</li>
+      <li data-ans="b">Deployment targets include OT edge devices in regulated, air-gapped environments</li>
+      <li data-ans="c">Industrial models are simpler and require less version control</li>
+      <li data-ans="d">Industrial ML projects have longer development cycles</li>
+    </ul>
+  </div>
+  <div class="takeaway-box">
+    <div class="takeaway-label">📝 Key Takeaways — Chapter 8</div>
+    <ul class="takeaway-list">
+      <li>Organisational and cultural barriers are the primary inhibitors of industrial analytics adoption — not technical ones.</li>
+      <li>Domain experts must be partners in the development process, not just consumers of its outputs. Models built without their input will not be trusted or used.</li>
+      <li>MLOps for industrial environments requires extensions of standard practice: OT-safe deployment pipelines, edge model management, and regulatory audit trails.</li>
+      <li>The business case for industrial data science must be built on specific, measurable value levers — avoided downtime, yield improvement, energy reduction — not on generic claims about AI.</li>
+      <li>Sustaining analytical capability requires deliberate talent development, institutional knowledge management, and a culture that celebrates curiosity and learning from data.</li>
+    </ul>
+  </div>
+  <div class="chapter-end">
+    <div class="chapter-end-line"></div>
+    <div class="chapter-end-sym">⬡</div>
+    <div class="chapter-end-line"></div>
+  </div>
+</section>

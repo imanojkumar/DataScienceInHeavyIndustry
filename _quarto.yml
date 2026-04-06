@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Data Science in Heavy Industry"
+  description: "From Raw Data to Operational Intelligence"
+  favicon: assets/images/favicon.ico   # Assuming you put a favicon here later
+  repo-url: https://github.com/imanojkumar/DataScienceInHeavyIndustry.git
+  repo-actions: none
+
+  # Disable default Quarto navigation
+  navbar: false
+  sidebar: false
+  page-navigation: false
+
+format:
+  html:
+    theme: none
+    toc: false
+    page-layout: custom
+    embed-resources: false
+    css: assets/css/style.css
+    include-after-body:
+      - text: |
+          <script src="assets/js/app.js"></script>
+
+execute:
+  echo: false

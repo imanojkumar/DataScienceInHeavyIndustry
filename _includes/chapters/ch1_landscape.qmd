@@ -1,0 +1,164 @@
+<section id="sec-ch1" class="section">
+  <div class="chapter-header">
+    <div class="chapter-num-label">
+      <span class="chapter-num-box">Chapter 01</span>
+      <span class="chapter-num-line"></span>
+    </div>
+    <h1 class="chapter-title">The Industrial Data Landscape</h1>
+    <div class="chapter-subtitle">Understanding the unique data challenges of mining, oil & gas, steel, cement, power generation, and manufacturing</div>
+  </div>
+
+  <div class="objectives-box">
+    <div class="objectives-label">🎯 Learning Objectives</div>
+    <ul class="objectives-list">
+      <li>Characterize the major heavy industry sectors and their data-generating processes</li>
+      <li>Identify the structural differences between industrial data and conventional business data</li>
+      <li>Understand sensor noise, legacy systems, and data silos as systemic challenges</li>
+      <li>Recognize why conventional data science methods must be adapted for industrial contexts</li>
+      <li>Appreciate the scale and velocity of operational data in heavy industry environments</li>
+    </ul>
+  </div>
+
+  <div class="pull-quote">
+    <div class="pull-quote-text">In manufacturing, the data has always been there. It was just locked inside the machines, the logs, the tacit knowledge of experienced operators. Our job is to set it free.</div>
+    <div class="pull-quote-attr">— Industrial Data Science Practitioner</div>
+  </div>
+
+  <p class="body-p drop-cap">Heavy industry is one of the oldest forms of organized human endeavour. Long before the internet, before silicon chips, before the very concept of "data science" existed as a named discipline, steel was being smelted, ore was being extracted from the earth, and cement was being calcined in rotating kilns. These industries were built not on data in the modern sense, but on experience — the accumulated wisdom of craftsmen and engineers who understood their processes through decades of direct observation.</p>
+
+  <p class="body-p">And yet, throughout this era of apparent data poverty, industrial processes were generating data at a scale that would be considered extraordinary even today. Every rotation of a pump shaft, every temperature fluctuation inside a blast furnace, every variation in the chemical composition of an ore feed — all of these events produced signals. The difference between then and now is not that the signals have suddenly appeared. The difference is that we can now capture, store, transmit, and analyse them with a fidelity and completeness that would have been unimaginable to the engineers of the previous century.</p>
+
+  <div class="sec-h2">1.1 The Anatomy of Heavy Industry</div>
+
+  <p class="body-p">For the purposes of this book, "heavy industry" refers to a cluster of sectors characterized by capital-intensive physical production processes, large-scale energy and resource consumption, significant fixed asset bases, and — critically — continuous or semi-continuous operational modes. The primary sectors we address are:</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Sector</th>
+        <th>Key Processes</th>
+        <th>Primary Data Sources</th>
+        <th>Typical Data Volume</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Mining</td><td>Drilling, blasting, crushing, conveying</td><td>Drill telemetry, conveyor sensors, grade control</td><td>100K–10M tags/site</td></tr>
+      <tr><td>Oil & Gas</td><td>Extraction, separation, refining, compression</td><td>Well sensors, SCADA, flow meters, DCS</td><td>500K–50M tags/site</td></tr>
+      <tr><td>Steel</td><td>Ironmaking, steelmaking, casting, rolling</td><td>Furnace sensors, spectrometers, thickness gauges</td><td>200K–5M tags/site</td></tr>
+      <tr><td>Cement</td><td>Quarrying, milling, kiln firing, blending</td><td>Kiln thermocouples, analyser systems, power meters</td><td>50K–1M tags/site</td></tr>
+      <tr><td>Power Generation</td><td>Combustion, turbine operation, grid dispatch</td><td>Turbine vibration, emissions, grid frequency</td><td>1M–100M tags/site</td></tr>
+      <tr><td>Discrete Manufacturing</td><td>Assembly, machining, welding, inspection</td><td>CNC data, vision systems, cycle time logs</td><td>10K–5M tags/site</td></tr>
+    </tbody>
+  </table>
+
+  <div class="diagram-placeholder">
+    <div class="ph-icon">📊</div>
+    <div class="ph-title">Figure 1.1 — The Industrial Value Chain and Data Generation Points</div>
+    <div class="ph-hint">[ Insert diagram: horizontal value chain from raw material extraction through processing, refining, and product delivery, with data generation icons at each stage. Suggest Sankey or flow diagram format. ]</div>
+  </div>
+  <div class="fig-caption">Figure 1.1 — Data is generated at every stage of the industrial value chain, from drill holes to dispatch.</div>
+
+  <div class="sec-h2">1.2 What Makes Industrial Data Different</div>
+
+  <p class="body-p">Anyone who has worked in both a digital business environment and an industrial setting will immediately recognise that industrial data is fundamentally different in character. Understanding these differences is not merely academic — it determines which methods will work and which will fail spectacularly.</p>
+
+  <div class="sec-h3">1.2.1 Time-Series Dominance</div>
+  <p class="body-p">Industrial data is overwhelmingly time-series data. Sensors report values at fixed intervals — often every second, sometimes every millisecond — creating datasets with billions of rows for a single variable over the lifetime of a plant. This is qualitatively different from the tabular, cross-sectional datasets that dominate traditional business analytics, and it demands specialised tools for storage, querying, and analysis.</p>
+
+  <div class="definition">
+    <div class="def-term">Process Historian</div>
+    <div class="def-text">A specialized database system designed to efficiently store, retrieve, and analyse high-frequency time-series data from industrial control systems. Examples include OSIsoft PI System, Honeywell PHD, and AspenTech IP.21. Process historians are the primary data warehouse of most heavy industrial facilities.</div>
+  </div>
+
+  <div class="sec-h3">1.2.2 Sensor Noise and Data Quality</div>
+  <p class="body-p">Industrial sensors operate in environments that are actively hostile to precision measurement. Vibration, electromagnetic interference, high temperatures, chemical exposure, and physical contamination all degrade sensor accuracy. The result is data that is noisy, intermittently missing, and frequently subject to sudden step changes caused by sensor drift, recalibration, or replacement.</p>
+
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-content">
+      <div class="tip-label">Practitioner Tip</div>
+      <div class="tip-text">Never assume stationarity in industrial time series. A flat-lining sensor is as likely to be a failed instrument as a stable process. Always validate data quality against independent measurements and physical plausibility before analysis.</div>
+    </div>
+  </div>
+
+  <div class="sec-h3">1.2.3 Legacy Systems and Data Silos</div>
+  <p class="body-p">Most heavy industrial facilities are not greenfield operations. They carry decades of technological accumulation: PLCs from the 1980s communicating over proprietary serial protocols, SCADA systems built on Windows XP, and laboratory information management systems (LIMS) that export data only as PDF reports. Integrating these systems into a coherent analytical platform is as much an archaeological exercise as an engineering one.</p>
+
+  <div class="image-placeholder">
+    <div class="ph-icon">🖼️</div>
+    <div class="ph-title">Figure 1.2 — Typical Legacy Technology Stack in a Heavy Industrial Plant</div>
+    <div class="ph-caption">[ Photo or illustrated diagram showing the layered control architecture — field instruments → PLCs → DCS → SCADA → Historian → MES → ERP, with annotations on typical vintage of each layer ]</div>
+  </div>
+  <div class="fig-caption">Figure 1.2 — Legacy systems may span five decades of technology, each with different data formats and protocols.</div>
+
+  <div class="sec-h2">1.3 The Scale of the Opportunity</div>
+  <p class="body-p">Despite — or perhaps because of — these challenges, the opportunity for data science in heavy industry is extraordinary. McKinsey & Company has estimated that advanced analytics in manufacturing and mining could generate $470–680 billion in annual value globally. The mechanisms are straightforward: reduced unplanned downtime, higher yields, lower energy consumption, fewer safety incidents, and better environmental compliance.</p>
+
+  <div class="case-study">
+    <div class="case-label">📋 Case Study Preview</div>
+    <div class="case-title">Predictive Maintenance at a Copper Concentrator</div>
+    <div class="case-text">[ Full case study placeholder — describe a copper concentrator that deployed machine learning to predict ball mill liner wear, reducing unplanned downtime by X% and extending liner life by Y days. Estimated value: $Z million per year. Include: context, data used, model approach, deployment challenges, and outcomes. Approximately 400–600 words in final text. ]</div>
+  </div>
+
+  <div class="sec-h2">1.4 A Framework for Industrial Data Science Projects</div>
+  <p class="body-p">Through the chapters that follow, we will return repeatedly to a common framework for approaching data science projects in industrial settings. This framework acknowledges that success requires more than technical competence — it requires a disciplined process that integrates domain knowledge at every stage.</p>
+
+  <div class="warn-box">
+    <div class="warn-label">⚠️ Common Pitfall</div>
+    <div class="warn-text">The most common failure mode in industrial data science projects is beginning model development before achieving a shared understanding of the business problem with domain experts. A highly accurate model solving the wrong problem is worse than no model at all — it consumes resources and erodes trust.</div>
+  </div>
+
+  <div class="snapshot-placeholder">
+    <div class="snapshot-toolbar"><span class="snap-dot"></span><span class="snap-dot"></span><span class="snap-dot"></span></div>
+    <div class="snap-content">
+      <div class="ph-icon">🖥️</div>
+      <div class="ph-title">[ Screenshot placeholder: OSIsoft PI Vision dashboard showing real-time sensor data from a mineral processing plant ]</div>
+    </div>
+  </div>
+
+  <div class="brain-box">
+    <div class="brain-label">🧠 Brainstorming & Ideas</div>
+    <div class="brain-text">Consider the industrial facility you know best, or one you would like to study. Reflect on the following questions:</div>
+    <ul class="brain-list">
+      <li>What is the single most expensive unplanned event that occurs at this facility? How often does it happen? Is there data that precedes it?</li>
+      <li>Where does domain knowledge currently live — in people's heads, in operating manuals, or in formal models? What happens when experienced operators retire?</li>
+      <li>What data is currently generated but not collected or analysed? What would it cost to start capturing it?</li>
+    </ul>
+  </div>
+
+  <div class="quiz-box">
+    <div class="quiz-label">❓ Mini Quiz — Chapter 1</div>
+
+    <div class="quiz-q">1. Which of the following best describes a process historian?</div>
+    <ul class="quiz-options" onclick="handleQuiz(event, 'b')">
+      <li data-ans="a">A database for storing production quality reports</li>
+      <li data-ans="b">A specialised time-series database for industrial sensor data</li>
+      <li data-ans="c">An ERP module for maintenance scheduling</li>
+      <li data-ans="d">A machine learning platform for predictive analytics</li>
+    </ul>
+
+    <div class="quiz-q">2. Which of the following is NOT a characteristic of industrial data that distinguishes it from conventional business data?</div>
+    <ul class="quiz-options" onclick="handleQuiz(event, 'c')">
+      <li data-ans="a">High-frequency time-series structure</li>
+      <li data-ans="b">Sensor noise and data quality challenges</li>
+      <li data-ans="c">Dominance of unstructured text data</li>
+      <li data-ans="d">Legacy system integration complexity</li>
+    </ul>
+  </div>
+
+  <div class="takeaway-box">
+    <div class="takeaway-label">📝 Key Takeaways — Chapter 1</div>
+    <ul class="takeaway-list">
+      <li>Heavy industry encompasses mining, oil & gas, steel, cement, power generation, and discrete manufacturing.</li>
+      <li>Industrial data is dominated by high-frequency time-series signals from sensors, PLCs, and control systems.</li>
+      <li>Data quality challenges (sensor noise, drift, missing data) are endemic and must be addressed before modelling.</li>
+      <li>Legacy systems and data silos are the norm, not the exception.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-end">
+    <div class="chapter-end-line"></div>
+    <div class="chapter-end-sym">⬡</div>
+    <div class="chapter-end-line"></div>
+  </div>
+</section>

@@ -1,0 +1,85 @@
+<section id="sec-ch3" class="section">
+  <div class="chapter-header">
+    <div class="chapter-num-label">
+      <span class="chapter-num-box">Chapter 03</span>
+      <span class="chapter-num-line"></span>
+    </div>
+    <h1 class="chapter-title">Exploratory Data Analysis for Industrial Processes</h1>
+    <div class="chapter-subtitle">Time-series decomposition, correlation analysis, anomaly flagging, and domain-informed feature engineering</div>
+  </div>
+
+  <div class="objectives-box">
+    <div class="objectives-label">🎯 Learning Objectives</div>
+    <ul class="objectives-list">
+      <li>Apply time-series decomposition to separate trend, seasonality, and noise in process data</li>
+      <li>Identify and interpret correlations between process variables using domain knowledge</li>
+      <li>Detect anomalies in high-dimensional sensor streams using statistical methods</li>
+      <li>Engineer features from raw sensor signals that capture physical process dynamics</li>
+    </ul>
+  </div>
+
+  <div class="pull-quote">
+    <div class="pull-quote-text">You can run a regression on any two variables and get a number. Whether that number means anything depends entirely on whether you understand the process that generated the data.</div>
+    <div class="pull-quote-attr">— Senior Metallurgist and Data Science Collaborator</div>
+  </div>
+
+  <p class="body-p drop-cap">Exploratory Data Analysis (EDA) is the indispensable first act of every data science project. In industrial settings, however, EDA is not simply a preliminary step to be completed before the "real work" begins. It is, in itself, a form of knowledge creation — a systematic interrogation of the data that, when conducted in partnership with domain experts, reveals the structure of the physical process in ways that no amount of modelling can substitute for.</p>
+
+  <div class="sec-h2">3.1 Time-Series Decomposition</div>
+  <p class="body-p">Industrial process data almost always exhibits temporal structure: long-term trends driven by equipment wear, periodic patterns linked to shift changes or maintenance cycles, and short-term autocorrelation driven by process dynamics. Before correlation analysis or anomaly detection can be meaningful, these components must be identified and, where appropriate, separated.</p>
+
+  <div class="diagram-placeholder">
+    <div class="ph-icon">📈</div>
+    <div class="ph-title">Figure 3.1 — STL Decomposition of a Kiln Feed Rate Signal</div>
+    <div class="ph-hint">[ Insert four-panel time-series plot: (1) Original signal, (2) Trend component, (3) Seasonal component (shift-related), (4) Residual. Annotate with industrial interpretation of each component. Generated with Python/matplotlib or R/ggplot2. ]</div>
+  </div>
+
+  <div class="sec-h2">3.2 Correlation Analysis in Process Data</div>
+  <p class="body-p">[ Full section content — covers Pearson and Spearman correlation for process variables, lag correlation to capture process delays (e.g., a change in feed grade takes 45 minutes to appear at the product end), spurious correlations arising from shared control signals, and the use of domain knowledge to interpret correlation matrices. Include a worked example with a flotation circuit. Approximately 800–1,200 words. ]</p>
+
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-content">
+      <div class="tip-label">Feature Engineering Tip</div>
+      <div class="tip-text">Process lags are among the most valuable features in industrial models, but the correct lag must be determined from process knowledge or cross-correlation analysis — not guessed. A ball mill with a 20-minute residence time will not transmit feed perturbations to the product stream instantaneously.</div>
+    </div>
+  </div>
+
+  <div class="sec-h2">3.3 Anomaly Detection in Sensor Streams</div>
+  <p class="body-p">[ Full section content — covers statistical methods (z-score, IQR, CUSUM), machine learning methods (Isolation Forest, One-Class SVM), distinguishing process anomalies from instrument failures, and the concept of "bad actor" tags. Approximately 700–1,000 words. ]</p>
+
+  <div class="snapshot-placeholder">
+    <div class="snapshot-toolbar"><span class="snap-dot"></span><span class="snap-dot"></span><span class="snap-dot"></span></div>
+    <div class="snap-content">
+      <div class="ph-icon">📉</div>
+      <div class="ph-title">[ Screenshot: Python/Jupyter notebook cell showing Isolation Forest anomaly detection on a compressor vibration signal ]</div>
+    </div>
+  </div>
+
+  <div class="quiz-box">
+    <div class="quiz-label">❓ Mini Quiz — Chapter 3</div>
+    <div class="quiz-q">1. A cross-correlation between mill feed grade and product grade peaks at a lag of 25 minutes. What does this most likely indicate?</div>
+    <ul class="quiz-options" onclick="handleQuiz(event, 'b')">
+      <li data-ans="a">The sensors are measuring the same physical point</li>
+      <li data-ans="b">The process residence time between feed and product is approximately 25 minutes</li>
+      <li data-ans="c">Both variables are controlled by the same feedback loop</li>
+      <li data-ans="d">The data has been incorrectly time-stamped</li>
+    </ul>
+  </div>
+
+  <div class="takeaway-box">
+    <div class="takeaway-label">📝 Key Takeaways — Chapter 3</div>
+    <ul class="takeaway-list">
+      <li>Industrial EDA is not a preliminary step — it is a core knowledge-creation activity that must involve domain experts.</li>
+      <li>Time-series decomposition separates trend, seasonality, and residual components.</li>
+      <li>Correlation analysis must account for process lags — the time delay between a cause and its observable effect downstream.</li>
+      <li>Anomaly detection must distinguish between sensor failures and true process anomalies — a critical distinction with safety implications.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-end">
+    <div class="chapter-end-line"></div>
+    <div class="chapter-end-sym">⬡</div>
+    <div class="chapter-end-line"></div>
+  </div>
+</section>

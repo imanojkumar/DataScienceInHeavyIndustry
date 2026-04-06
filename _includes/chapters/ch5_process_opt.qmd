@@ -1,0 +1,82 @@
+<section id="sec-ch5" class="section">
+  <div class="chapter-header">
+    <div class="chapter-num-label">
+      <span class="chapter-num-box">Chapter 05</span>
+      <span class="chapter-num-line"></span>
+    </div>
+    <h1 class="chapter-title">Process Optimization and Quality Control</h1>
+    <div class="chapter-subtitle">Design of experiments, statistical process control, reinforcement learning, and computer vision for industrial quality</div>
+  </div>
+  <div class="objectives-box">
+    <div class="objectives-label">🎯 Learning Objectives</div>
+    <ul class="objectives-list">
+      <li>Apply Design of Experiments (DoE) to identify optimal process setpoints</li>
+      <li>Implement Statistical Process Control (SPC) charts for continuous monitoring</li>
+      <li>Understand reinforcement learning approaches for real-time setpoint optimisation</li>
+      <li>Design computer vision systems for surface defect and quality inspection</li>
+      <li>Quantify the business value of yield improvement and waste reduction</li>
+    </ul>
+  </div>
+  <div class="pull-quote">
+    <div class="pull-quote-text">A one percent improvement in recovery at a large copper concentrator is worth more than the entire annual budget of most analytics teams. The leverage is extraordinary.</div>
+    <div class="pull-quote-attr">— Process Optimisation Manager, Base Metals</div>
+  </div>
+  <p class="body-p drop-cap">[ Chapter 5 full text placeholder — approximately 6,000–8,000 words covering: statistical foundations of process optimisation, DoE methodology in industrial settings, CUSUM and Shewhart control charts, neural network setpoint advisors, deep learning for visual inspection, and case studies. ]</p>
+  <div class="diagram-placeholder">
+    <div class="ph-icon">⚙️</div>
+    <div class="ph-title">Figure 5.1 — Response Surface from a Central Composite Design Experiment</div>
+    <div class="ph-hint">[ 3D response surface plot showing product quality (z-axis) as a function of two key process variables (x and y axes), with optimal region highlighted ]</div>
+  </div>
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-content">
+      <div class="tip-label">SPC Rule of Thumb</div>
+      <div class="tip-text">Western Electric rules define signals of special cause variation in control charts. Any single point beyond ±3σ, or 8 consecutive points on one side of the centreline, warrants investigation — regardless of whether specifications are being met.</div>
+    </div>
+  </div>
+  <div class="image-placeholder">
+    <div class="ph-icon">🖼️</div>
+    <div class="ph-title">Figure 5.2 — CNN Defect Classification on Steel Strip Surface</div>
+    <div class="ph-caption">[ Example output from a trained convolutional neural network classifying surface defects on cold-rolled steel: inclusions, pits, scratches. Show grid of classified patches with confidence scores. ]</div>
+  </div>
+  <div class="snapshot-placeholder">
+    <div class="snapshot-toolbar"><span class="snap-dot"></span><span class="snap-dot"></span><span class="snap-dot"></span></div>
+    <div class="snap-content">
+      <div class="ph-icon">📊</div>
+      <div class="ph-title">[ Screenshot: Shewhart X-bar and R control charts for a cement mill product fineness, showing an out-of-control condition detected and corrected ]</div>
+    </div>
+  </div>
+  <div class="brain-box">
+    <div class="brain-label">🧠 Brainstorming & Ideas</div>
+    <div class="brain-text">Optimisation vs. control: these are different problems with different solutions.</div>
+    <ul class="brain-list">
+      <li>What is the current best-known operating point for your key process? How was it determined — historical analysis, DoE, or tribal knowledge?</li>
+      <li>What constraints limit optimisation — equipment capacity, product specifications, environmental limits, or operator comfort zones?</li>
+      <li>Where does human judgement currently override automatic control? Is this appropriate, or does it represent an opportunity for better model design?</li>
+    </ul>
+  </div>
+  <div class="quiz-box">
+    <div class="quiz-label">❓ Mini Quiz — Chapter 5</div>
+    <div class="quiz-q">1. In a Shewhart control chart, the Upper Control Limit (UCL) is typically set at:</div>
+    <ul class="quiz-options" onclick="handleQuiz(event,'b')">
+      <li data-ans="a">±2σ from the process mean</li>
+      <li data-ans="b">±3σ from the process mean</li>
+      <li data-ans="c">The upper product specification limit</li>
+      <li data-ans="d">The 95th percentile of the historical distribution</li>
+    </ul>
+  </div>
+  <div class="takeaway-box">
+    <div class="takeaway-label">📝 Key Takeaways — Chapter 5</div>
+    <ul class="takeaway-list">
+      <li>DoE provides a structured, efficient methodology for identifying optimal process conditions with the minimum number of trials.</li>
+      <li>SPC distinguishes common cause (normal) variation from special cause (assignable) variation, enabling targeted process intervention.</li>
+      <li>Reinforcement learning offers a route to adaptive, real-time process optimisation, but requires careful reward design and safety constraint enforcement.</li>
+      <li>Computer vision systems for quality inspection can match or exceed human accuracy while operating continuously and consistently.</li>
+    </ul>
+  </div>
+  <div class="chapter-end">
+    <div class="chapter-end-line"></div>
+    <div class="chapter-end-sym">⬡</div>
+    <div class="chapter-end-line"></div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+<section id="sec-foreword" class="section">
+  <div class="page-header">
+    <div class="page-label">Front Matter</div>
+    <div class="page-title">Foreword</div>
+  </div>
+  <div class="page-body">
+    <p>[ Foreword placeholder — written by a distinguished industry leader, senior academic, or prominent practitioner. Typically 500–800 words. The foreword should address: why this book matters now, the author's unique standing to write it, and what the reader can expect to gain. ]</p>
+    <p>Heavy industry stands at an extraordinary inflection point. For centuries, the sector has been defined by the roar of furnaces, the rhythm of extraction, and the hard-won wisdom of engineers who learned their craft on the plant floor. Today, a silent revolution runs alongside that noise — the revolution of data.</p>
+    <div class="pull-quote">
+      <div class="pull-quote-text">The industry that built the modern world now has the tools to rebuild itself — smarter, safer, and more efficient than at any point in history.</div>
+      <div class="pull-quote-attr">— [ Foreword Author Name ], [ Title & Affiliation ]</div>
+    </div>
+  </div>
+</section>

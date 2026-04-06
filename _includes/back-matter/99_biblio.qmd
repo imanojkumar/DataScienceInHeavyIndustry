@@ -1,0 +1,11 @@
+<section id="sec-biblio" class="section">
+  <div class="page-header">
+    <div class="page-label">Back Matter</div>
+    <div class="page-title">Bibliography</div>
+  </div>
+  <p class="body-p" style="margin-bottom:24px;">References are organised by chapter. All citations follow APA 7th edition format.</p>
+  <div class="sec-h2" style="font-size:1.1rem; margin-top:20px;">Chapter 1</div>
+  <p class="body-p" style="font-size:0.85rem; line-height:1.9; color:var(--text-muted);">
+    McKinsey Global Institute. (2023). <em>The value of advanced analytics in industrial operations.</em> McKinsey & Company.<br>
+  </p>
+</section>

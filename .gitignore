@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# R and RStudio
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Quarto
+.quarto/
+_site/
+/.quarto/
+**/*.quarto_ipynb

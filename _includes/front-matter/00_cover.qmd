@@ -1,0 +1,19 @@
+<section id="sec-cover" class="section active">
+  <div class="cover-wrap">
+    <div class="cover-image-placeholder">
+      <div class="cover-img-label">Book Cover Art</div>
+      <div class="cover-icon">🏭</div>
+      <div class="cover-img-hint">[ Replace with final cover illustration — suggested: an industrial control room overlaid with data visualizations ]</div>
+    </div>
+    <div class="cover-body">
+      <div class="cover-edition">First Edition · 2025</div>
+      <div class="cover-main-title">Data Science in Heavy Industry</div>
+      <div class="cover-subtitle">From Raw Data to Operational Intelligence</div>
+      <div class="cover-divider"></div>
+      <div class="cover-author">Manoj Kumar</div>
+      <div class="cover-publisher">Academic & Technical Press</div>
+    </div>
+  </div>
+</section>
+
+

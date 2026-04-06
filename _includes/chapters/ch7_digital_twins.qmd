@@ -1,0 +1,76 @@
+<section id="sec-ch7" class="section">
+  <div class="chapter-header">
+    <div class="chapter-num-label">
+      <span class="chapter-num-box">Chapter 07</span>
+      <span class="chapter-num-line"></span>
+    </div>
+    <h1 class="chapter-title">Digital Twins and Simulation</h1>
+    <div class="chapter-subtitle">Physics-informed machine learning, hybrid modelling, real-time synchronisation, and industrial simulation for decision support</div>
+  </div>
+  <div class="objectives-box">
+    <div class="objectives-label">🎯 Learning Objectives</div>
+    <ul class="objectives-list">
+      <li>Define digital twins and distinguish them from simulation models and dashboards</li>
+      <li>Apply physics-informed neural networks (PINNs) to industrial process modelling</li>
+      <li>Design hybrid models that combine first-principles equations with data-driven components</li>
+      <li>Implement real-time synchronisation between physical assets and their digital counterparts</li>
+      <li>Use digital twins for scenario planning, operator training, and capital project evaluation</li>
+    </ul>
+  </div>
+  <div class="pull-quote">
+    <div class="pull-quote-text">A digital twin is not a dashboard. It is not a simulation. It is a living model that evolves as the physical asset evolves — and it is only as good as the data that feeds it.</div>
+    <div class="pull-quote-attr">— Digital Engineering Director, Energy Sector</div>
+  </div>
+  <p class="body-p drop-cap">[ Chapter 7 full text placeholder — approximately 6,000–8,000 words covering: the three levels of digital twin maturity (descriptive, predictive, prescriptive), first-principles modelling of industrial processes, physics-informed neural networks, hybrid model architectures, real-time data synchronisation challenges, and digital twin platforms. ]</p>
+  <div class="diagram-placeholder">
+    <div class="ph-icon">🔁</div>
+    <div class="ph-title">Figure 7.1 — Architecture of an Industrial Digital Twin</div>
+    <div class="ph-hint">[ System architecture diagram: Physical Asset (sensors, actuators) ↔ Real-time Data Link ↔ Digital Twin (physics model + ML layer) ↔ Analytics & Decision Layer ↔ Operator Interface. Annotate data flow, update frequency, and feedback loops. ]</div>
+  </div>
+  <div class="image-placeholder">
+    <div class="ph-icon">🏭</div>
+    <div class="ph-title">Figure 7.2 — Digital Twin of a Rotary Cement Kiln</div>
+    <div class="ph-caption">[ Visualisation of a 3D kiln digital twin showing temperature profile along kiln length, flame shape, and material bed thickness — all updated in real time from plant instrumentation. ]</div>
+  </div>
+  <div class="snapshot-placeholder">
+    <div class="snapshot-toolbar"><span class="snap-dot"></span><span class="snap-dot"></span><span class="snap-dot"></span></div>
+    <div class="snap-content">
+      <div class="ph-icon">🖥️</div>
+      <div class="ph-title">[ Screenshot: Physics-informed neural network training in PyTorch — loss curves for data loss and physics residual loss, showing convergence to a physically consistent solution ]</div>
+    </div>
+  </div>
+  <div class="brain-box">
+    <div class="brain-label">🧠 Brainstorming & Ideas</div>
+    <div class="brain-text">Digital twins represent the most ambitious intersection of data science and industrial engineering. Consider:</div>
+    <ul class="brain-list">
+      <li>For which asset or process at your facility would a digital twin deliver the most value? Why that one, rather than others?</li>
+      <li>What first-principles knowledge exists that could anchor a hybrid model? Is it documented, or does it live in the experience of senior engineers?</li>
+      <li>How would you validate a digital twin? What constitutes sufficient proof that the twin's behaviour matches reality?</li>
+      <li>What is the maintenance burden of a digital twin over its lifetime? Who owns it after the data scientists leave?</li>
+    </ul>
+  </div>
+  <div class="quiz-box">
+    <div class="quiz-label">❓ Mini Quiz — Chapter 7</div>
+    <div class="quiz-q">1. A "prescriptive" digital twin, the most mature maturity level, is characterised by:</div>
+    <ul class="quiz-options" onclick="handleQuiz(event,'c')">
+      <li data-ans="a">Displaying current asset state in a 3D visualisation</li>
+      <li data-ans="b">Predicting future asset behaviour under current conditions</li>
+      <li data-ans="c">Recommending specific actions to optimise or correct asset behaviour</li>
+      <li data-ans="d">Replicating historical data for root cause analysis</li>
+    </ul>
+  </div>
+  <div class="takeaway-box">
+    <div class="takeaway-label">📝 Key Takeaways — Chapter 7</div>
+    <ul class="takeaway-list">
+      <li>A digital twin is a live, data-synchronised model of a physical asset — distinct from static simulation and from monitoring dashboards.</li>
+      <li>Physics-informed neural networks enforce physical laws (conservation of mass, energy) during training, improving generalisation in data-sparse regimes.</li>
+      <li>Hybrid models — combining first-principles equations with data-driven components — outperform purely data-driven models in industrial settings where physics is well-understood.</li>
+      <li>Real-time synchronisation requires robust data pipelines, version control for model parameters, and drift detection to ensure the twin remains representative of the physical asset.</li>
+    </ul>
+  </div>
+  <div class="chapter-end">
+    <div class="chapter-end-line"></div>
+    <div class="chapter-end-sym">⬡</div>
+    <div class="chapter-end-line"></div>
+  </div>
+</section>

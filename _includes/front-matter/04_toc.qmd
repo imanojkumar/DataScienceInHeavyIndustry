@@ -1,0 +1,33 @@
+<section id="sec-toc" class="section">
+  <div class="page-header">
+    <div class="page-label">Front Matter</div>
+    <div class="page-title">Table of Contents</div>
+  </div>
+
+  <div class="toc-section-header">Front Matter</div>
+  <ul class="toc-list">
+    <li class="toc-item" onclick="showSection('sec-foreword')"><span class="toc-num">—</span><span class="toc-item-title">Foreword</span><span class="toc-dots"></span><span class="toc-page">v</span></li>
+    <li class="toc-item" onclick="showSection('sec-preface')"><span class="toc-num">—</span><span class="toc-item-title">Preface</span><span class="toc-dots"></span><span class="toc-page">ix</span></li>
+    <li class="toc-item" onclick="showSection('sec-acknowledgements')"><span class="toc-num">—</span><span class="toc-item-title">Acknowledgements</span><span class="toc-dots"></span><span class="toc-page">xiii</span></li>
+  </ul>
+
+  <div class="toc-section-header">Chapters</div>
+  <ul class="toc-list">
+    <li class="toc-item" onclick="showSection('sec-ch1')"><span class="toc-num">01</span><span class="toc-item-title">The Industrial Data Landscape</span><span class="toc-dots"></span><span class="toc-page">1</span></li>
+    <li class="toc-item" onclick="showSection('sec-ch2')"><span class="toc-num">02</span><span class="toc-item-title">Data Infrastructure and Industrial IoT</span><span class="toc-dots"></span><span class="toc-page">35</span></li>
+    <li class="toc-item" onclick="showSection('sec-ch3')"><span class="toc-num">03</span><span class="toc-item-title">Exploratory Data Analysis for Industrial Processes</span><span class="toc-dots"></span><span class="toc-page">71</span></li>
+    <li class="toc-item" onclick="showSection('sec-ch4')"><span class="toc-num">04</span><span class="toc-item-title">Predictive Maintenance and Asset Health Monitoring</span><span class="toc-dots"></span><span class="toc-page">115</span></li>
+    <li class="toc-item" onclick="showSection('sec-ch5')"><span class="toc-num">05</span><span class="toc-item-title">Process Optimization and Quality Control</span><span class="toc-dots"></span><span class="toc-page">163</span></li>
+    <li class="toc-item" onclick="showSection('sec-ch6')"><span class="toc-num">06</span><span class="toc-item-title">Safety, Risk, and Environmental Compliance</span><span class="toc-dots"></span><span class="toc-page">205</span></li>
+    <li class="toc-item" onclick="showSection('sec-ch7')"><span class="toc-num">07</span><span class="toc-item-title">Digital Twins and Simulation</span><span class="toc-dots"></span><span class="toc-page">247</span></li>
+    <li class="toc-item" onclick="showSection('sec-ch8')"><span class="toc-num">08</span><span class="toc-item-title">Building a Data Science Culture in Heavy Industry</span><span class="toc-dots"></span><span class="toc-page">291</span></li>
+  </ul>
+
+  <div class="toc-section-header">Back Matter</div>
+  <ul class="toc-list">
+    <li class="toc-item" onclick="showSection('sec-glossary')"><span class="toc-num">—</span><span class="toc-item-title">Glossary</span><span class="toc-dots"></span><span class="toc-page">335</span></li>
+    <li class="toc-item" onclick="showSection('sec-index')"><span class="toc-num">—</span><span class="toc-item-title">Index</span><span class="toc-dots"></span><span class="toc-page">347</span></li>
+    <li class="toc-item" onclick="showSection('sec-author')"><span class="toc-num">—</span><span class="toc-item-title">About the Author</span><span class="toc-dots"></span><span class="toc-page">361</span></li>
+    <li class="toc-item" onclick="showSection('sec-biblio')"><span class="toc-num">—</span><span class="toc-item-title">Bibliography</span><span class="toc-dots"></span><span class="toc-page">363</span></li>
+  </ul>
+</section>

@@ -1,0 +1,106 @@
+<section id="sec-ch2" class="section">
+  <div class="chapter-header">
+    <div class="chapter-num-label">
+      <span class="chapter-num-box">Chapter 02</span>
+      <span class="chapter-num-line"></span>
+    </div>
+    <h1 class="chapter-title">Data Infrastructure and Industrial IoT</h1>
+    <div class="chapter-subtitle">SCADA, historians, IIoT, edge computing, and the architecture of industrial data pipelines</div>
+  </div>
+
+  <div class="objectives-box">
+    <div class="objectives-label">🎯 Learning Objectives</div>
+    <ul class="objectives-list">
+      <li>Understand the layered architecture of industrial control and data systems (ISA-95)</li>
+      <li>Distinguish between SCADA, DCS, MES, and ERP in the industrial context</li>
+      <li>Assess the role of Industrial IoT (IIoT) platforms and edge computing</li>
+      <li>Design time-series data pipelines suitable for industrial analytics workloads</li>
+    </ul>
+  </div>
+
+  <div class="pull-quote">
+    <div class="pull-quote-text">Before you can analyse the data, you have to be able to trust it. And before you can trust it, you have to understand every step of the journey from sensor to screen.</div>
+    <div class="pull-quote-attr">— Process Data Engineer, Petroleum Refinery</div>
+  </div>
+
+  <p class="body-p drop-cap">The question of how data flows from a sensor buried in an underground mine or submerged in a sub-sea wellhead to an analytical model running in the cloud is not a trivial one. Between those two points lies one of the most complex and consequential data infrastructures that modern engineering has produced: the industrial control and information technology stack. Understanding this stack is not optional for industrial data scientists — it is prerequisite knowledge.</p>
+
+  <div class="sec-h2">2.1 The ISA-95 Reference Architecture</div>
+  <p class="body-p">The International Society of Automation's ISA-95 standard defines a hierarchical model for integrating enterprise and control systems. This model, known as the "automation pyramid," defines five levels of the industrial information stack, from physical process at the bottom to enterprise resource planning at the top.</p>
+
+  <div class="diagram-placeholder">
+    <div class="ph-icon">🏗️</div>
+    <div class="ph-title">Figure 2.1 — The ISA-95 Automation Pyramid</div>
+    <div class="ph-hint">[ Insert pyramid diagram with 5 levels: Level 0 (Physical Process), Level 1 (Field Instruments & Actuators), Level 2 (Control — PLCs/DCS), Level 3 (Operations — SCADA/MES/Historian), Level 4 (Business — ERP/Analytics). ]</div>
+  </div>
+
+  <div class="sec-h2">2.2 SCADA, DCS, and Process Historians</div>
+  <p class="body-p">At the heart of most industrial data environments are three systems: the Supervisory Control and Data Acquisition (SCADA) system, the Distributed Control System (DCS), and the process historian. Each plays a distinct role, and their interaction determines the data available for analytics.</p>
+
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-content">
+      <div class="tip-label">Key Distinction</div>
+      <div class="tip-text">SCADA systems are typically used for geographically distributed operations (pipelines, electrical grids, water systems). DCS systems are typically used for continuous process control at a single site (refineries, chemical plants). Many modern facilities run both.</div>
+    </div>
+  </div>
+
+  <div class="sec-h2">2.3 Industrial IoT and Edge Computing</div>
+  <p class="body-p">The Industrial Internet of Things (IIoT) represents a generational shift in how industrial data is collected and processed. Where traditional instrumentation was hardwired and proprietary, IIoT devices communicate over open standards — OPC-UA, MQTT, and REST APIs — enabling a far more flexible and interconnected data environment.</p>
+
+  <div class="image-placeholder">
+    <div class="ph-icon">🌐</div>
+    <div class="ph-title">Figure 2.2 — IIoT Network Architecture</div>
+    <div class="ph-caption">[ Diagram showing field sensors → edge gateway → industrial IoT platform → cloud analytics → visualisation layer. ]</div>
+  </div>
+
+  <div class="sec-h2">2.4 Building Industrial Data Pipelines</div>
+  <p class="body-p">[ Full section content — covers time-series ingestion, data compression algorithms used in historians (exception-based storage, swinging door compression), data normalisation, metadata management, and the design of analytics-ready data models. Approximately 800–1,200 words in final text. ]</p>
+
+  <div class="snapshot-placeholder">
+    <div class="snapshot-toolbar"><span class="snap-dot"></span><span class="snap-dot"></span><span class="snap-dot"></span></div>
+    <div class="snap-content">
+      <div class="ph-icon">⚙️</div>
+      <div class="ph-title">[ Screenshot: Apache Kafka or Azure IoT Hub stream processing pipeline configuration ]</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <div class="note-label">📌 Note on OT/IT Security</div>
+    <div class="note-text">Connecting operational technology (OT) networks to IT systems and the internet introduces significant cybersecurity risks. Industrial control systems were historically air-gapped — physically isolated from external networks. Any IIoT or cloud integration project must engage cybersecurity expertise.</div>
+  </div>
+
+  <div class="quiz-box">
+    <div class="quiz-label">❓ Mini Quiz — Chapter 2</div>
+    <div class="quiz-q">1. Which level of the ISA-95 pyramid does a process historian typically occupy?</div>
+    <ul class="quiz-options" onclick="handleQuiz(event, 'c')">
+      <li data-ans="a">Level 1 — Field Instruments</li>
+      <li data-ans="b">Level 2 — Control (PLC/DCS)</li>
+      <li data-ans="c">Level 3 — Operations (SCADA/MES)</li>
+      <li data-ans="d">Level 4 — Business (ERP)</li>
+    </ul>
+    <div class="quiz-q">2. What is "exception-based storage" in the context of a process historian?</div>
+    <ul class="quiz-options" onclick="handleQuiz(event, 'b')">
+      <li data-ans="a">Storing only error and alarm events from control systems</li>
+      <li data-ans="b">Compressing time-series data by recording only values that change beyond a threshold</li>
+      <li data-ans="c">Excluding outlier sensor readings from the database</li>
+      <li data-ans="d">A backup storage policy for critical process variables</li>
+    </ul>
+  </div>
+
+  <div class="takeaway-box">
+    <div class="takeaway-label">📝 Key Takeaways — Chapter 2</div>
+    <ul class="takeaway-list">
+      <li>The ISA-95 automation pyramid provides a useful reference architecture for understanding how data flows through industrial systems.</li>
+      <li>SCADA handles distributed monitoring; DCS manages continuous process control; the process historian stores all time-series data for analytics.</li>
+      <li>IIoT extends data collection to previously unconnected assets using open protocols, but introduces OT cybersecurity risks.</li>
+      <li>Edge computing reduces latency and bandwidth requirements by processing data close to the source before transmission.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-end">
+    <div class="chapter-end-line"></div>
+    <div class="chapter-end-sym">⬡</div>
+    <div class="chapter-end-line"></div>
+  </div>
+</section>

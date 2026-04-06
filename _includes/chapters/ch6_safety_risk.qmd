@@ -1,0 +1,73 @@
+<section id="sec-ch6" class="section">
+  <div class="chapter-header">
+    <div class="chapter-num-label">
+      <span class="chapter-num-box">Chapter 06</span>
+      <span class="chapter-num-line"></span>
+    </div>
+    <h1 class="chapter-title">Safety, Risk, and Environmental Compliance</h1>
+    <div class="chapter-subtitle">Incident pattern analysis, near-miss prediction, emissions monitoring, and building trustworthy AI for safety-critical systems</div>
+  </div>
+  <div class="objectives-box">
+    <div class="objectives-label">🎯 Learning Objectives</div>
+    <ul class="objectives-list">
+      <li>Analyse incident and near-miss data to identify systemic safety risks</li>
+      <li>Build predictive models for near-miss events using operational and contextual data</li>
+      <li>Design continuous emissions monitoring and anomaly detection systems</li>
+      <li>Apply explainability techniques (SHAP, LIME) to safety-critical models</li>
+      <li>Navigate the regulatory and ethical dimensions of AI in safety-critical applications</li>
+    </ul>
+  </div>
+  <div class="pull-quote">
+    <div class="pull-quote-text">Every serious accident is preceded by a near miss. Every near miss is preceded by a hazard. The data knows this. Our job is to learn to listen to it before the consequences become irreversible.</div>
+    <div class="pull-quote-attr">— Industrial Safety Researcher</div>
+  </div>
+  <p class="body-p drop-cap">[ Chapter 6 full text placeholder — approximately 6,000–8,000 words covering: Heinrich's triangle and the near-miss paradigm, OSHA incident classification, feature engineering for safety models, dust and noise modelling, real-time air quality analytics, Bayesian networks for risk assessment, and explainable AI requirements. ]</p>
+  <div class="diagram-placeholder">
+    <div class="ph-icon">⚠️</div>
+    <div class="ph-title">Figure 6.1 — Heinrich's Safety Triangle and the Data Science Opportunity</div>
+    <div class="ph-hint">[ Inverted triangle with: Fatalities (top, narrow), Recordable Injuries, Near Misses, Unsafe Acts/Conditions (base, wide). Annotate which levels generate structured data vs. unstructured reports vs. no record at all. Show data science intervention points. ]</div>
+  </div>
+  <div class="warn-box">
+    <div class="warn-label">⚠️ Critical Caution</div>
+    <div class="warn-text">Safety-critical models must be held to a higher standard of validation than productivity models. A false negative — failing to predict a safety event — has consequences that cannot be undone. Explainability is not optional: operators who cannot understand why a model raised an alert cannot take appropriate action, and models whose reasoning cannot be interrogated cannot be trusted.</div>
+  </div>
+  <div class="image-placeholder">
+    <div class="ph-icon">🌫️</div>
+    <div class="ph-title">Figure 6.2 — Continuous Emissions Monitoring Data and Regulatory Threshold Exceedance Detection</div>
+    <div class="ph-caption">[ Time-series plot of SO₂ and NOₓ emissions from a smelter stack, with regulatory limits shown as horizontal dashed lines and exceedance events highlighted. ]</div>
+  </div>
+  <div class="brain-box">
+    <div class="brain-label">🧠 Brainstorming & Ideas</div>
+    <div class="brain-text">Safety data is frequently the most politically sensitive data in an industrial organisation. Consider:</div>
+    <ul class="brain-list">
+      <li>How are near-miss events currently recorded and classified? Is the classification consistent enough to support machine learning?</li>
+      <li>What is the organisational culture around reporting near misses? Does the current system incentivise reporting or penalise it?</li>
+      <li>How would you design a model that predicts safety risk without creating a surveillance culture that discourages open reporting?</li>
+      <li>What would a "safety digital twin" look like for your facility?</li>
+    </ul>
+  </div>
+  <div class="quiz-box">
+    <div class="quiz-label">❓ Mini Quiz — Chapter 6</div>
+    <div class="quiz-q">1. SHAP values in the context of safety model explainability provide:</div>
+    <ul class="quiz-options" onclick="handleQuiz(event,'b')">
+      <li data-ans="a">A measure of model accuracy on safety-critical test sets</li>
+      <li data-ans="b">The contribution of each feature to an individual model prediction</li>
+      <li data-ans="c">A regulatory compliance certificate for AI-based safety systems</li>
+      <li data-ans="d">A visualisation of decision tree splits for a specific prediction</li>
+    </ul>
+  </div>
+  <div class="takeaway-box">
+    <div class="takeaway-label">📝 Key Takeaways — Chapter 6</div>
+    <ul class="takeaway-list">
+      <li>Near-miss data, when systematically collected and analysed, contains early warning signals for serious incidents — but only if reporting culture is open and non-punitive.</li>
+      <li>Emissions monitoring can be enhanced by ML models that predict exceedance before it occurs, enabling proactive operational adjustment.</li>
+      <li>Safety-critical AI systems must prioritise explainability and auditability over raw predictive accuracy.</li>
+      <li>Regulatory compliance requires rigorous data governance — traceability, version control, and chain of custody for all data used in compliance reporting.</li>
+    </ul>
+  </div>
+  <div class="chapter-end">
+    <div class="chapter-end-line"></div>
+    <div class="chapter-end-sym">⬡</div>
+    <div class="chapter-end-line"></div>
+  </div>
+</section>

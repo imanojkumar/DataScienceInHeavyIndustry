@@ -1,0 +1,8 @@
+<section id="sec-glossary" class="section">
+  <div class="page-header">
+    <div class="page-label">Back Matter</div>
+    <div class="page-title">Glossary</div>
+  </div>
+  <div class="index-alpha">A</div>
+  <div class="glossary-entry"><div class="gloss-term">Autocorrelation</div><div class="gloss-text">The correlation of a time series with a lagged version of itself.</div></div>
+</section>

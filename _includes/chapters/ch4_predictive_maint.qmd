@@ -1,0 +1,118 @@
+<section id="sec-ch4" class="section">
+  <div class="chapter-header">
+    <div class="chapter-num-label">
+      <span class="chapter-num-box">Chapter 04</span>
+      <span class="chapter-num-line"></span>
+    </div>
+    <h1 class="chapter-title">Predictive Maintenance and Asset Health Monitoring</h1>
+    <div class="chapter-subtitle">Survival analysis, remaining useful life estimation, vibration analysis, and machine learning for industrial equipment</div>
+  </div>
+
+  <div class="objectives-box">
+    <div class="objectives-label">🎯 Learning Objectives</div>
+    <ul class="objectives-list">
+      <li>Differentiate between reactive, preventive, condition-based, and predictive maintenance strategies</li>
+      <li>Apply survival analysis and hazard functions to equipment failure data</li>
+      <li>Estimate Remaining Useful Life (RUL) using regression and deep learning approaches</li>
+      <li>Analyse vibration signals using FFT, envelope analysis, and bearing fault frequency calculations</li>
+      <li>Design and deploy a predictive maintenance system with appropriate alert thresholds</li>
+    </ul>
+  </div>
+
+  <div class="pull-quote">
+    <div class="pull-quote-text">The question is never whether the bearing will fail. The question is when — and whether you will know before it takes the machine with it.</div>
+    <div class="pull-quote-attr">— Rotating Equipment Reliability Engineer</div>
+  </div>
+
+  <p class="body-p drop-cap">Of all the applications of data science in heavy industry, predictive maintenance attracts the most attention — and for good reason. Unplanned equipment failures are among the most costly events that industrial operators face. A single unplanned shutdown of a primary crusher at a large copper mine can cost millions of dollars per day in lost production. A compressor failure on an offshore platform can trigger a safety emergency and a production outage measured in weeks.</p>
+
+  <div class="sec-h2">4.1 The Maintenance Strategy Spectrum</div>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Strategy</th><th>Trigger</th><th>Advantages</th><th>Limitations</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Reactive</td><td>Equipment breaks</td><td>Zero maintenance cost until failure</td><td>Unpredictable, often catastrophic</td></tr>
+      <tr><td>Preventive</td><td>Calendar/runtime schedule</td><td>Predictable, safe</td><td>Over-maintains healthy assets; under-maintains degrading ones</td></tr>
+      <tr><td>Condition-Based</td><td>Measured parameter crosses threshold</td><td>Responds to actual condition</td><td>Threshold-setting requires expertise</td></tr>
+      <tr><td>Predictive (PdM)</td><td>Model forecasts impending failure</td><td>Optimises intervention timing; reduces false alarms</td><td>Requires data, models, and process integration</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-h2">4.2 Survival Analysis for Equipment Failure</div>
+  <p class="body-p">Survival analysis provides the statistical foundation for understanding failure distributions and estimating the probability that an asset will survive to a given point in time.</p>
+
+  <div class="definition">
+    <div class="def-term">Remaining Useful Life (RUL)</div>
+    <div class="def-text">The expected time from the current moment until an asset requires maintenance intervention or replacement. RUL estimation is the central prediction task in predictive maintenance, and models are typically evaluated on their ability to accurately forecast RUL in the weeks and days preceding failure.</div>
+  </div>
+
+  <div class="sec-h2">4.3 Vibration Signal Analysis</div>
+  <p class="body-p">Vibration analysis is one of the oldest and most reliable condition monitoring techniques in heavy industry. Modern accelerometers generate continuous high-frequency waveforms that encode, in their spectral content, a detailed signature of the mechanical health of rotating equipment.</p>
+
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-content">
+      <div class="tip-label">Bearing Fault Frequencies</div>
+      <div class="tip-text">The four fundamental bearing fault frequencies — BPFO (outer race), BPFI (inner race), BSF (ball spin), and FTF (fundamental train/cage) — can be calculated from the bearing geometry and shaft speed.</div>
+    </div>
+  </div>
+
+  <div class="image-placeholder">
+    <div class="ph-icon">📊</div>
+    <div class="ph-title">Figure 4.2 — FFT Spectrum of a Pump Bearing Showing BPFO Harmonics</div>
+    <div class="ph-caption">[ Frequency spectrum plot (Hz on x-axis, amplitude on y-axis) with BPFO and its harmonics highlighted in red. ]</div>
+  </div>
+
+  <div class="sec-h2">4.4 Machine Learning for RUL Estimation</div>
+  <p class="body-p">[ Full section content — covers classical approaches (Random Forest, XGBoost on engineered features), deep learning approaches (LSTM for sequence modelling, CNN for spectrogram analysis), the NASA CMAPSS benchmark dataset, multi-task learning for fleet-level RUL, and uncertainty quantification in RUL predictions. ]</p>
+
+  <div class="snapshot-placeholder">
+    <div class="snapshot-toolbar"><span class="snap-dot"></span><span class="snap-dot"></span><span class="snap-dot"></span></div>
+    <div class="snap-content">
+      <div class="ph-icon">🤖</div>
+      <div class="ph-title">[ Screenshot: LSTM model training curves (train/validation loss) for an RUL prediction model ]</div>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <div class="case-label">📋 Case Study</div>
+    <div class="case-title">Predictive Maintenance for SAG Mill Liners — A Mining Case Study</div>
+    <div class="case-text">[ Full case study placeholder — a gold mining operation deploys a predictive model to forecast SAG mill liner wear based on power draw, acoustic emissions, and throughput data. ]</div>
+  </div>
+
+  <div class="quiz-box">
+    <div class="quiz-label">❓ Mini Quiz — Chapter 4</div>
+    <div class="quiz-q">1. Which maintenance strategy triggers intervention based on a model forecast of future failure, rather than a measured threshold crossing?</div>
+    <ul class="quiz-options" onclick="handleQuiz(event, 'c')">
+      <li data-ans="a">Reactive maintenance</li>
+      <li data-ans="b">Condition-based maintenance</li>
+      <li data-ans="c">Predictive maintenance</li>
+      <li data-ans="d">Preventive maintenance</li>
+    </ul>
+    <div class="quiz-q">2. BPFO in vibration analysis refers to:</div>
+    <ul class="quiz-options" onclick="handleQuiz(event, 'b')">
+      <li data-ans="a">Ball Pass Frequency, Overall</li>
+      <li data-ans="b">Ball Pass Frequency, Outer Race</li>
+      <li data-ans="c">Bearing Performance Factor, Operational</li>
+      <li data-ans="d">Basic Proximity Filter Output</li>
+    </ul>
+  </div>
+
+  <div class="takeaway-box">
+    <div class="takeaway-label">📝 Key Takeaways — Chapter 4</div>
+    <ul class="takeaway-list">
+      <li>The maintenance strategy spectrum runs from reactive to prescriptive; predictive maintenance optimises intervention timing using data-driven failure forecasts.</li>
+      <li>Survival analysis and hazard functions provide a principled statistical framework for equipment reliability characterisation.</li>
+      <li>Vibration signal analysis, using FFT and bearing fault frequency calculations, provides early warning of rotating equipment degradation.</li>
+      <li>LSTM and other sequence models capture the temporal dynamics of equipment degradation; ensemble methods remain competitive on well-engineered feature sets.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-end">
+    <div class="chapter-end-line"></div>
+    <div class="chapter-end-sym">⬡</div>
+    <div class="chapter-end-line"></div>
+  </div>
+</section>

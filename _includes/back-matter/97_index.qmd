@@ -1,0 +1,11 @@
+<section id="sec-index" class="section">
+  <div class="page-header">
+    <div class="page-label">Back Matter</div>
+    <div class="page-title">Index</div>
+  </div>
+  <div class="index-alpha">A</div>
+  <div class="index-grid">
+    <div class="index-entry">Anomaly detection <span>88, 92, 210</span></div>
+    <div class="index-entry">Asset health monitoring <span>115–162</span></div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+---
+title: " "
+---
+
+```{=html}
+
+<div id="progress-bar"></div>
+
+<button id="hamburger" aria-label="Toggle menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="overlay"></div>
+
+<div id="wrapper">
+
+<nav id="sidebar" aria-label="Book navigation">
+  <div class="sb-book-title">
+    <div class="sb-title-main">Data Science in Heavy Industry</div>
+    <div class="sb-title-sub">From Raw Data to Operational Intelligence</div>
+  </div>
+
+  <div class="nav-section-label">Front Matter</div>
+  <a class="nav-link active" onclick="showSection('sec-cover')">📖 Book Cover</a>
+  <a class="nav-link" onclick="showSection('sec-foreword')">📜 Foreword</a>
+  <a class="nav-link" onclick="showSection('sec-preface')">✍️ Preface</a>
+  <a class="nav-link" onclick="showSection('sec-acknowledgements')">🙏 Acknowledgements</a>
+  <a class="nav-link" onclick="showSection('sec-toc')">📑 Table of Contents</a>
+
+  <div class="nav-section-label">Chapters</div>
+  <a class="nav-link chapter-link" onclick="showSection('sec-ch1')"><span class="nav-num">01</span>The Industrial Data Landscape</a>
+  <a class="nav-link chapter-link" onclick="showSection('sec-ch2')"><span class="nav-num">02</span>Data Infrastructure & Industrial IoT</a>
+  <a class="nav-link chapter-link" onclick="showSection('sec-ch3')"><span class="nav-num">03</span>Exploratory Data Analysis</a>
+  <a class="nav-link chapter-link" onclick="showSection('sec-ch4')"><span class="nav-num">04</span>Predictive Maintenance</a>
+  <a class="nav-link chapter-link" onclick="showSection('sec-ch5')"><span class="nav-num">05</span>Process Optimization & Quality Control</a>
+  <a class="nav-link chapter-link" onclick="showSection('sec-ch6')"><span class="nav-num">06</span>Safety, Risk & Compliance</a>
+  <a class="nav-link chapter-link" onclick="showSection('sec-ch7')"><span class="nav-num">07</span>Digital Twins & Simulation</a>
+  <a class="nav-link chapter-link" onclick="showSection('sec-ch8')"><span class="nav-num">08</span>Building a Data Science Culture</a>
+
+  <div class="nav-section-label">Back Matter</div>
+  <a class="nav-link" onclick="showSection('sec-glossary')">📚 Glossary</a>
+  <a class="nav-link" onclick="showSection('sec-index')">📇 Index</a>
+  <a class="nav-link" onclick="showSection('sec-author')">👤 About the Author</a>
+  <a class="nav-link" onclick="showSection('sec-biblio')">📖 Bibliography</a>
+</nav>
+
+<main id="main">
+
+  {{< include _includes/front-matter/00_cover.qmd >}}
+  {{< include _includes/front-matter/01_foreword.qmd >}}
+  {{< include _includes/front-matter/02_preface.qmd >}}
+  {{< include _includes/front-matter/03_acknowledgements.qmd >}}
+  {{< include _includes/front-matter/04_toc.qmd >}}
+
+  {{< include _includes/chapters/ch1_landscape.qmd >}}
+  {{< include _includes/chapters/ch2_infrastructure.qmd >}}
+  {{< include _includes/chapters/ch3_eda.qmd >}}
+  {{< include _includes/chapters/ch4_predictive_maint.qmd >}}
+  {{< include _includes/chapters/ch5_process_opt.qmd >}}
+  {{< include _includes/chapters/ch6_safety_risk.qmd >}}
+  {{< include _includes/chapters/ch7_digital_twins.qmd >}}
+  {{< include _includes/chapters/ch8_data_culture.qmd >}}
+
+  {{< include _includes/back-matter/96_glossary.qmd >}}
+  {{< include _includes/back-matter/97_index.qmd >}}
+  {{< include _includes/back-matter/98_author.qmd >}}
+  {{< include _includes/back-matter/99_biblio.qmd >}}
+
+</main>
+
+</div>
+
+<button id="back-top" aria-label="Back to top">↑</button>
+
+```

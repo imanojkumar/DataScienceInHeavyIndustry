@@ -1,0 +1,14 @@
+<section id="sec-author" class="section">
+  <div class="page-header">
+    <div class="page-label">Back Matter</div>
+    <div class="page-title">About the Author</div>
+  </div>
+  <div class="author-card">
+    <div class="author-avatar"><div class="ph-icon">👤</div></div>
+    <div class="author-info">
+      <div class="author-name">Manoj Kumar</div>
+      <div class="author-title">[ Title / Position / Affiliation ]</div>
+      <p>[ Author biography placeholder — 200–350 words. ]</p>
+    </div>
+  </div>
+</section>

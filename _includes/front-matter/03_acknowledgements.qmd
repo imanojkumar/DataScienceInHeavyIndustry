@@ -1,0 +1,10 @@
+<section id="sec-acknowledgements" class="section">
+  <div class="page-header">
+    <div class="page-label">Front Matter</div>
+    <div class="page-title">Acknowledgements</div>
+  </div>
+  <div class="page-body">
+    <p>No book is written alone. This one is the product of hundreds of conversations, site visits, workshop sessions, and late-night debates with colleagues whose generosity with their time and expertise made everything possible.</p>
+    <p>The author is particularly grateful to the plant engineers, SCADA operators, maintenance crews, and process technicians who allowed access to their data environments and, more importantly, their domain knowledge. Without their trust, this work would be entirely theoretical.</p>
+  </div>
+</section>
